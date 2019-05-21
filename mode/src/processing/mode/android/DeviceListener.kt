@@ -19,12 +19,10 @@
  Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package processing.mode.android;
+package processing.mode.android
 
-import java.util.List;
+interface DeviceListener {
+    fun stackTrace(trace: List<String>)
 
-public interface DeviceListener {
-  void stackTrace(final List<String> trace);
-
-  void sketchStopped();
+    fun sketchStopped()
 }
