@@ -14,7 +14,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
         classpath group: 'commons-io', name: 'commons-io', version: '2.5'
-        classpath group: 'org.zeroturnaround', name: 'zt-zip', version: '1.9'        
+        classpath group: 'org.zeroturnaround', name: 'zt-zip', version: '1.9'
     }
 }
 
@@ -32,6 +32,7 @@ allprojects {
     ext.slf4jVersion = '1.7.10'
     ext.gradlewVersion = '4.4.1'
     ext.toolsLibVersion = '26.0.0-dev'
+    ext.kotlinVersion = '1.2.71'
 
     Properties modeProperties = new Properties()
     modeProperties.load(project.rootProject.file("mode/mode.properties").newDataInputStream())
@@ -124,3 +125,4 @@ task dist {
                    file("dist/AndroidMode.txt").toPath(), REPLACE_EXISTING);
     }
 }
+
