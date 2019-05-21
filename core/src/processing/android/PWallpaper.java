@@ -44,7 +44,7 @@ public class PWallpaper extends WallpaperService implements AppComponent {
     size = new Point();
     WindowManager wm = (WindowManager) getSystemService(WINDOW_SERVICE);
     Display display = wm.getDefaultDisplay();
-    CompatUtils.getDisplayParams(display, metrics, size);
+    CompatUtils.INSTANCE.getDisplayParams(display, metrics, size);
   }
 
 

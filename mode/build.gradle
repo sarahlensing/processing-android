@@ -4,9 +4,19 @@ import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 
 apply plugin: 'kotlin'
 
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}"
+    }
+}
+
 repositories {
     mavenCentral()
 }
+
 compileKotlin {
     kotlinOptions {
         jvmTarget = "1.8"
@@ -80,11 +90,4 @@ build.doLast {
     Files.copy(file("$buildDir/libs/mode.jar").toPath(),
                file("mode/AndroidMode.jar").toPath(), REPLACE_EXISTING);
 }
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}"
-    }
-}
+

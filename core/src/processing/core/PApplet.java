@@ -4821,7 +4821,7 @@ public class PApplet extends Object implements ActivityAPI, PConstants {
    */
   static public BufferedReader createReader(InputStream input) {
     InputStreamReader isr =
-      new InputStreamReader(input, CompatUtils.getCharsetUTF8());
+      new InputStreamReader(input, CompatUtils.INSTANCE.getCharsetUTF8());
 
     BufferedReader reader = new BufferedReader(isr);
     // consume the Unicode BOM (byte order marker) if present
@@ -4879,7 +4879,7 @@ public class PApplet extends Object implements ActivityAPI, PConstants {
   static public PrintWriter createWriter(OutputStream output) {
     BufferedOutputStream bos = new BufferedOutputStream(output, 8192);
     OutputStreamWriter osw =
-      new OutputStreamWriter(bos, CompatUtils.getCharsetUTF8());
+      new OutputStreamWriter(bos, CompatUtils.INSTANCE.getCharsetUTF8());
     return new PrintWriter(osw);
   }
 

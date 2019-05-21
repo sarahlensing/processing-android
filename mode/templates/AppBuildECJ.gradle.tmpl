@@ -1,4 +1,14 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.71"
+    }
+}
 
 android {
     compileSdkVersion @@target_sdk@@
@@ -85,4 +95,5 @@ dependencies {
     implementation 'com.google.android.support:wearable:@@wear_version@@'
     compileOnly 'com.google.android.wearable:wearable:@@wear_version@@' 
     implementation files('libs/processing-core.jar')
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.71'
 }

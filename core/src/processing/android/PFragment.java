@@ -69,7 +69,7 @@ public class PFragment extends Fragment implements AppComponent {
     size = new Point();
     WindowManager wm = getActivity().getWindowManager();
     Display display = wm.getDefaultDisplay();
-    CompatUtils.getDisplayParams(display, metrics, size);
+    CompatUtils.INSTANCE.getDisplayParams(display, metrics, size);
   }
 
 
