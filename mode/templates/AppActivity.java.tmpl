@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     FrameLayout frame = new FrameLayout(this);
-    frame.setId(CompatUtils.getUniqueViewId());
+    frame.setId(CompatUtils.INSTANCE.getUniqueViewId());
     setContentView(frame, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 
                                                      ViewGroup.LayoutParams.MATCH_PARENT));
     

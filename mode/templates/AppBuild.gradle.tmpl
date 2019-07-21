@@ -1,4 +1,14 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.71"
+    }
+}
 
 android {
     compileSdkVersion @@target_sdk@@
@@ -38,5 +48,6 @@ dependencies {
     implementation files('libs/processing-core.jar')    
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'    
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    compile 'org.jetbrains.kotlin:kotlin-stdlib-jre8:1.2.71'
 }

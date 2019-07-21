@@ -63,7 +63,7 @@ public class PWatchFaceGLES extends Gles2WatchFaceService implements AppComponen
     size = new Point();
     WindowManager wm = (WindowManager) getSystemService(WINDOW_SERVICE);
     Display display = wm.getDefaultDisplay();
-    CompatUtils.getDisplayParams(display, metrics, size);
+    CompatUtils.INSTANCE.getDisplayParams(display, metrics, size);
   }
 
 
